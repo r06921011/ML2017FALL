@@ -30,7 +30,7 @@ print('U.shape',U.shape)
 w = np.dot(imag, U)
 
 Name = sys.argv[2]
-re_idx = int(Name[:Name.find('.')])
+re_idx = io.imread(os.path.join(img_path, Name))
 
 recon_num = re_idx
 recon = ima_mean + np.dot(w[recon_num, 0:4], U[:, 0:4].T)
